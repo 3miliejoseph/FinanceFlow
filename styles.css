@@ -442,6 +442,32 @@ h3 {
   object-position: center 22%;
 }
 
+/* Mobile earnings image adjustments */
+@media (max-width: 768px) {
+  .hero-image-container {
+    height: 400px;
+    margin: -48px -32px 32px -32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-image-container {
+    height: 300px;
+    margin: -24px -16px 24px -16px;
+  }
+  
+  .hero-bg-image {
+    object-position: center 25%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-image-container {
+    height: 250px;
+    margin: -20px -12px 20px -12px;
+  }
+}
+
 .hero-h1 span {
   color: var(--mint);
 }
@@ -2112,27 +2138,74 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
     padding: 0 24px;
   }
 
+  /* Tablet navigation adjustments */
+  .nav-links {
+    gap: 16px;
+    font-size: 0.8rem;
+  }
+
+  /* Tablet hero adjustments */
   .hero-main {
-    padding: 32px 24px;
+    padding: 40px 32px;
+  }
+
+  .hero-h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
   }
 
   .hero-sub {
-    font-size: 0.85rem;
-    max-width: 450px;
+    font-size: 0.95rem;
+    max-width: 90%;
   }
 
-  .hero-actions {
-    gap: 8px;
+  /* Tablet grid adjustments */
+  .wwd-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
   }
 
-  .btn-fill,
-  .btn-out {
-    padding: 8px 16px;
+  .hp-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .strat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .fund-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Tablet table adjustments */
+  table.pt {
     font-size: 0.75rem;
   }
 
-  .footer {
-    padding: 32px 24px 16px;
+  table.pt th,
+  table.pt td {
+    padding: 8px 10px;
+  }
+
+  /* Tablet cards */
+  .pc {
+    padding: 16px;
+  }
+
+  .sc {
+    padding: 20px;
+  }
+
+  /* Tablet featured pick */
+  .fp-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .fp-chart-card {
+    max-width: 100%;
   }
 }
 
@@ -2145,6 +2218,20 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
 
   .nav-links {
     display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: var(--forest);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    z-index: 99;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .hamburger {
@@ -2240,5 +2327,129 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
   .btn-out {
     padding: 10px 16px;
     font-size: 0.7rem;
+  }
+
+  /* Fund sections responsive */
+  .fund-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .fund-stat {
+    padding: 12px;
+  }
+
+  .fund-value {
+    font-size: 1.1rem;
+  }
+
+  .fund-label {
+    font-size: 0.6rem;
+  }
+
+  .terms-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .term-item {
+    padding: 8px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .performance-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .perf-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* Tables responsive */
+  .table-wrap {
+    padding: 16px;
+  }
+
+  table.pt {
+    font-size: 0.7rem;
+  }
+
+  table.pt th,
+  table.pt td {
+    padding: 6px 8px;
+  }
+
+  table.pt th:nth-child(n+3),
+  table.pt td:nth-child(n+3) {
+    display: none;
+  }
+
+  /* Stock picks responsive */
+  .wwd-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sc {
+    padding: 16px;
+  }
+
+  .sc-met {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Filter bar responsive */
+  .filter-bar {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .fb {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+
+  /* Touch-friendly improvements */
+  .btn-fill,
+  .btn-out {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    touch-action: manipulation;
+  }
+
+  /* Improve tap targets */
+  .mini-card,
+  .pc,
+  .sc {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  /* Better spacing for touch */
+  .fund-stat,
+  .term-item,
+  .perf-item {
+    padding: 12px;
   }
 }
