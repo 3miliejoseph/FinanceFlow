@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Flow — Stock Picks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">Finance<span>Flow</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="invest.html">Invest</a>
+      <a href="https://sites.google.com/view/weeklystockpicks/home" target="_blank">Stock Picks</a>
+      <a href="earnings.html">Quarterly Earnings</a>
+    </div>
+    <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+  </nav>
+
+  <main class="site-main">
+
+    <div class="page-hero">
+      <span class="slbl">Analyst Selections</span>
+      <h1>This Week's <em>Stock Picks</em></h1>
+      <p>Full analyst thesis, entry ranges, price targets, and conviction scores. Updated weekly by our research desk.
+      </p>
+    </div>
+
+    <!-- FEATURED PICK -->
+    <div class="featured-pick">
+      <div class="fp-eyebrow">⭐ Pick of the Week</div>
+      <div class="fp-body">
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
+            <span class="fp-ticker">NVDA</span>
+            <div>
+              <div class="fp-name">NVIDIA Corporation</div>
+              <div class="fp-meta">Semiconductors · Technology · Q4 FY2026 Beat</div>
+            </div>
+          </div>
+          <div class="fp-tags">
+            <span class="tag tg">Strong Buy</span>
+            <span class="tag tt">AI Infrastructure</span>
+          </div>
+          <p class="fp-thesis">NVIDIA's dominance in AI accelerator chips is unmatched. With Blackwell architecture
+            ramping ahead of schedule and data center revenues growing 200%+ YoY, the company is positioned as the
+            infrastructure layer of the AI decade. Supply constraints are easing into H2, opening significant margin
+            expansion potential.</p>
+          <div class="fp-levels">
+            <div class="fp-lvl"><span>Entry Zone</span><strong>$820 – $860</strong></div>
+            <div class="fp-lvl"><span>Price Target</span><strong>$1,100</strong></div>
+            <div class="fp-lvl"><span>Stop Loss</span><strong>$760</strong></div>
+            <div class="fp-lvl"><span>Upside</span><strong class="green">+31%</strong></div>
+          </div>
+        </div>
+        <div>
+          <div class="fp-chart-card">
+            <svg viewBox="0 0 240 80" style="width:100%;height:80px;display:block;">
+              <defs>
+                <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#38C698" stop-opacity=".18" />
+                  <stop offset="100%" stop-color="#38C698" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path d="M0,74 L28,62 L56,54 L84,40 L104,47 L132,27 L160,19 L188,11 L216,7 L240,2" fill="none"
+                stroke="#38C698" stroke-width="2" />
+              <path d="M0,74 L28,62 L56,54 L84,40 L104,47 L132,27 L160,19 L188,11 L216,7 L240,2 L240,80 L0,80Z"
+                fill="url(#g2)" />
+            </svg>
+            <div class="fp-chart-tag">+127% YTD</div>
+          </div>
+          <div class="fp-stat-grid">
+            <div class="fp-stat"><span>P/E Ratio</span><strong>52.4x</strong></div>
+            <div class="fp-stat"><span>Rev Growth</span><strong>+206%</strong></div>
+            <div class="fp-stat"><span>Gross Margin</span><strong>73.8%</strong></div>
+            <div class="fp-stat"><span>Market Cap</span><strong>$2.1T</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER + TABLE -->
+    <div class="filter-bar">
+      <span class="filter-lbl">Filter by</span>
+      <button class="fb active" data-filter="all">All Picks</button>
+      <button class="fb" data-filter="tech">Technology</button>
+      <button class="fb" data-filter="finance">Finance</button>
+      <button class="fb" data-filter="health">Healthcare</button>
+      <button class="fb" data-filter="energy">Energy</button>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-title">Active Recommendations</div>
+      <table class="pt" id="stocks-table">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Company</th>
+            <th>Sector</th>
+            <th>Rating</th>
+            <th>Entry</th>
+            <th>Target</th>
+            <th>Upside</th>
+            <th>Conviction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-cat="tech">
+            <td class="pt-tk">NVDA</td>
+            <td class="pt-co">NVIDIA Corp.</td>
+            <td class="pt-co">Technology</td>
+            <td><span class="tag tg">Strong Buy</span></td>
+            <td>$840</td>
+            <td>$1,100</td>
+            <td class="up-val">+31%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:84%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr data-cat="tech">
+            <td class="pt-tk">MSFT</td>
+            <td class="pt-co">Microsoft Corp.</td>
+            <td class="pt-co">Technology</td>
+            <td><span class="tag tg">Buy</span></td>
+            <td>$415</td>
+            <td>$485</td>
+            <td class="up-val">+17%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:76%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr data-cat="tech">
+            <td class="pt-tk">META</td>
+            <td class="pt-co">Meta Platforms</td>
+            <td class="pt-co">Technology</td>
+            <td><span class="tag tf">Accumulate</span></td>
+            <td>$560</td>
+            <td>$620</td>
+            <td class="up-val">+11%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:68%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr data-cat="finance">
+            <td class="pt-tk">JPM</td>
+            <td class="pt-co">JPMorgan Chase</td>
+            <td class="pt-co">Finance</td>
+            <td><span class="tag tg">Buy</span></td>
+            <td>$195</td>
+            <td>$230</td>
+            <td class="up-val">+18%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:72%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr data-cat="health">
+            <td class="pt-tk">LLY</td>
+            <td class="pt-co">Eli Lilly &amp; Co.</td>
+            <td class="pt-co">Healthcare</td>
+            <td><span class="tag tg">Strong Buy</span></td>
+            <td>$750</td>
+            <td>$920</td>
+            <td class="up-val">+23%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:80%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr data-cat="energy">
+            <td class="pt-tk">XOM</td>
+            <td class="pt-co">ExxonMobil</td>
+            <td class="pt-co">Energy</td>
+            <td><span class="tag tf">Hold</span></td>
+            <td>$118</td>
+            <td>$130</td>
+            <td class="up-val">+10%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:55%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr data-cat="tech">
+            <td class="pt-tk">AAPL</td>
+            <td class="pt-co">Apple Inc.</td>
+            <td class="pt-co">Technology</td>
+            <td><span class="tag tf">Accumulate</span></td>
+            <td>$178</td>
+            <td>$210</td>
+            <td class="up-val">+18%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:70%"></div>
+              </div>
+            </td>
+          </tr>
+          <tr data-cat="finance">
+            <td class="pt-tk">V</td>
+            <td class="pt-co">Visa Inc.</td>
+            <td class="pt-co">Finance</td>
+            <td><span class="tag tg">Buy</span></td>
+            <td>$270</td>
+            <td>$310</td>
+            <td class="up-val">+15%</td>
+            <td>
+              <div class="cbar">
+                <div style="width:74%"></div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="nav-logo">Finance<span>Flow</span></div>
+        <p>Intelligent analysis for the modern investor.</p>
+      </div>
+      <div class="ft-links">
+        <div class="ft-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="invest.html">Invest</a>
+          <a href="https://sites.google.com/view/weeklystockpicks/home" target="_blank">Stock Picks</a>
+          <a href="earnings.html">Quarterly Earnings</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>&copy; 2026 FinanceFlow</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
