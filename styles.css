@@ -446,7 +446,9 @@ h3 {
 @media (max-width: 768px) {
   .hero-image-container {
     height: 400px;
-    margin: -48px -32px 32px -32px;
+    margin: -48px -24px 32px -24px;
+    width: calc(100vw - 48px);
+    left: 24px;
   }
 }
 
@@ -454,6 +456,8 @@ h3 {
   .hero-image-container {
     height: 300px;
     margin: -24px -16px 24px -16px;
+    width: calc(100vw - 32px);
+    left: 16px;
   }
   
   .hero-bg-image {
@@ -465,6 +469,8 @@ h3 {
   .hero-image-container {
     height: 250px;
     margin: -20px -12px 20px -12px;
+    width: calc(100vw - 24px);
+    left: 12px;
   }
 }
 
@@ -2211,6 +2217,16 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
 
 /* Mobile phones */
 @media (max-width: 600px) {
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   .navbar {
     padding: 0 16px;
     height: 56px;
@@ -2256,14 +2272,18 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
   }
 
   .hero-h1 {
-    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    line-height: 1.3;
+    margin-bottom: 16px;
+    word-wrap: break-word;
   }
 
   .hero-sub {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     max-width: 100%;
-    margin-bottom: 24px;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    word-wrap: break-word;
   }
 
   .hero-actions {
@@ -2307,44 +2327,100 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
 
 /* Small mobile phones */
 @media (max-width: 400px) {
+  /* Prevent overflow */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   .navbar {
     padding: 0 12px;
   }
 
   .hero-main {
-    padding: 20px 12px;
+    padding: 16px 12px;
   }
 
   .hero-h1 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    word-wrap: break-word;
   }
 
   .hero-sub {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    word-wrap: break-word;
   }
 
   .btn-fill,
   .btn-out {
-    padding: 10px 16px;
-    font-size: 0.7rem;
+    padding: 8px 12px;
+    font-size: 0.65rem;
+    width: 100%;
+    max-width: 240px;
+  }
+
+  /* Smaller text for fund sections */
+  .fund-value {
+    font-size: 0.8rem;
+  }
+
+  .fund-label {
+    font-size: 0.5rem;
+  }
+
+  .fund-subtitle {
+    font-size: 0.6rem;
+  }
+
+  .fund-title {
+    font-size: 1.1rem;
+  }
+
+  /* Tighter margins */
+  .fund-stat {
+    padding: 8px;
+  }
+
+  .term-item,
+  .perf-item {
+    padding: 6px 0;
   }
 
   /* Fund sections responsive */
   .fund-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+    max-width: 100%;
   }
 
   .fund-stat {
     padding: 12px;
+    min-width: 0;
   }
 
   .fund-value {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    word-wrap: break-word;
   }
 
   .fund-label {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
+    word-wrap: break-word;
+  }
+
+  /* Fund subtitle text fix */
+  .fund-subtitle {
+    font-size: 0.65rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  /* Fund title text fix */
+  .fund-title {
+    font-size: 1.2rem;
+    word-wrap: break-word;
   }
 
   .terms-grid {
@@ -2373,20 +2449,41 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
   /* Tables responsive */
   .table-wrap {
     padding: 16px;
+    overflow-x: auto;
+    max-width: 100%;
   }
 
   table.pt {
     font-size: 0.7rem;
+    min-width: 600px;
+    width: 100%;
   }
 
   table.pt th,
   table.pt td {
     padding: 6px 8px;
+    white-space: nowrap;
   }
 
   table.pt th:nth-child(n+3),
   table.pt td:nth-child(n+3) {
     display: none;
+  }
+
+  /* Container fixes */
+  .container,
+  .content,
+  .section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Grid fixes */
+  .fund-stats,
+  .terms-grid,
+  .performance-grid {
+    max-width: 100%;
+    overflow: hidden;
   }
 
   /* Stock picks responsive */
