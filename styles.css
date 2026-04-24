@@ -2263,27 +2263,70 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
   }
 
   .hero-main {
-    padding: 24px 16px;
+    padding: 32px 20px;
     text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-badge {
-    margin-bottom: 16px;
+    font-size: 0.65rem;
+    padding: 16px 12px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    letter-spacing: 0.02em;
+    gap: 4px;
+    line-height: 1.2;
+    white-space: normal;
+    min-height: auto;
+  }
+
+  .announcement-line1 {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    color: var(--forest);
+  }
+
+  .announcement-line2 {
+    display: block;
+    margin-top: -2px;
+    font-weight: 500;
+    color: var(--charcoal);
+  }
+
+  .announcement-line2 a {
+    color: var(--mint);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--mint);
+    text-underline-offset: 2px;
+  }
+
+  .announcement-line2 a:hover {
+    color: var(--forest);
+    text-decoration-color: var(--forest);
   }
 
   .hero-h1 {
-    font-size: clamp(1.2rem, 5vw, 1.8rem);
-    line-height: 1.3;
-    margin-bottom: 16px;
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    line-height: 1.4;
+    margin-bottom: 20px;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .hero-sub {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     max-width: 100%;
-    margin-bottom: 20px;
-    line-height: 1.5;
+    margin-bottom: 24px;
+    line-height: 1.6;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .hero-actions {
@@ -2296,7 +2339,14 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
   .btn-fill,
   .btn-out {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+    border-radius: var(--rad);
+    margin: 8px 0;
+  }
+
+  .btn-fill, .btn-out {
     justify-content: center;
   }
 
@@ -2338,27 +2388,76 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
   }
 
   .hero-main {
-    padding: 16px 12px;
+    padding: 24px 16px;
   }
 
   .hero-h1 {
-    font-size: 1.1rem;
-    line-height: 1.3;
+    font-size: 1rem;
+    line-height: 1.4;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 16px;
   }
 
   .hero-sub {
-    font-size: 0.7rem;
-    line-height: 1.4;
+    font-size: 0.75rem;
+    line-height: 1.5;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
   }
 
   .btn-fill,
   .btn-out {
-    padding: 8px 12px;
-    font-size: 0.65rem;
+    padding: 10px 16px;
+    font-size: 0.7rem;
     width: 100%;
-    max-width: 240px;
+    max-width: 260px;
+    margin: 6px 0;
+  }
+
+  /* Smaller announcement for small mobile */
+  .hero-badge {
+    font-size: 0.6rem;
+    padding: 14px 10px;
+    margin-bottom: 16px;
+    margin-top: -8px;
+    letter-spacing: 0.01em;
+    gap: 3px;
+    line-height: 1.1;
+    white-space: normal;
+    min-height: auto;
+  }
+
+  .announcement-line1 {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    color: var(--forest);
+  }
+
+  .announcement-line2 {
+    display: block;
+    width: 100%;
+    margin-top: 2px;
+    font-weight: 500;
+    color: var(--charcoal);
+  }
+
+  .announcement-line2 a {
+    color: var(--mint);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--mint);
+    text-underline-offset: 2px;
+  }
+
+  .announcement-line2 a:hover {
+    color: var(--forest);
+    text-decoration-color: var(--forest);
   }
 
   /* Smaller text for fund sections */
@@ -2378,14 +2477,56 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
     font-size: 1.1rem;
   }
 
-  /* Tighter margins */
+  /* Better spacing for fund sections */
   .fund-stat {
-    padding: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
   }
 
   .term-item,
   .perf-item {
-    padding: 6px 0;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: var(--snow);
+    border-radius: var(--rad);
+    border: 1px solid var(--border);
+  }
+
+  /* Fund sections spacing */
+  .fund-section {
+    margin-bottom: 32px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .fund-content,
+  .fund-mission {
+    margin-bottom: 24px;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .fund-cta {
+    margin-top: 32px;
+    padding: 24px 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ensure all fund elements stay within bounds */
+  .fund-stats,
+  .terms-grid,
+  .performance-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .fund-stat,
+  .term-item,
+  .perf-item {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   /* Fund sections responsive */
@@ -2393,11 +2534,17 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     max-width: 100%;
+    margin: 0 20px 24px 20px;
+    box-sizing: border-box;
   }
 
   .fund-stat {
     padding: 12px;
     min-width: 0;
+    background: var(--snow);
+    border-radius: var(--rad);
+    border: 1px solid var(--border);
+    box-sizing: border-box;
   }
 
   .fund-value {
@@ -2412,15 +2559,30 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
 
   /* Fund subtitle text fix */
   .fund-subtitle {
-    font-size: 0.65rem;
-    line-height: 1.4;
+    font-size: 0.7rem;
+    line-height: 1.5;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 16px;
   }
 
   /* Fund title text fix */
   .fund-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  /* Fund content text */
+  .fund-content p,
+  .fund-mission p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 16px;
   }
 
   .terms-grid {
@@ -2473,9 +2635,34 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
   /* Container fixes */
   .container,
   .content,
-  .section {
+  .section,
+  .site-main,
+  .hero,
+  .fund-section,
+  .page-hero {
     max-width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Ensure all main content respects viewport */
+  .site-main {
+    width: 100%;
+  }
+
+  /* Fix fund content width */
+  .fund-content,
+  .fund-mission {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto 24px auto;
+  }
+
+  /* Fix table wrapper */
+  .table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Grid fixes */
