@@ -2631,6 +2631,7 @@ main.site-main section.hero div.hero-main h1.hero-h1 {
     gap: 16px;
     z-index: 99;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 1.045rem;
   }
 
   .nav-links.active {
