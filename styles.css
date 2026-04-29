@@ -543,6 +543,43 @@ h3 {
   .hero-image-container {
     transform: translateX(0);
   }
+
+  /* Mobile announcement banner sizing to match home page */
+  .announcement-banner .banner-text {
+    font-size: calc(0.85rem) !important;
+    font-weight: 700 !important;
+    padding: 12px calc(50vw - 50% + 20px) 12px 20px !important;
+  }
+
+  /* Reduce space between invest buttons on mobile */
+  .invest-actions {
+    gap: 6px !important;
+    margin-top: 20px !important;
+  }
+
+  /* Reduce space between fund points on mobile */
+  .fund-points {
+    gap: 20px !important;
+  }
+
+  /* Make fund stats numbers bigger on mobile */
+  .fund-value {
+    font-size: 1.93rem !important;
+  }
+
+  /* Make fund stats labels slightly larger on mobile */
+  .fund-label {
+    font-size: 0.745rem !important;
+  }
+
+  /* Move all content down on invest page mobile */
+  .invest.html .page-hero {
+    padding-top: 60px !important;
+  }
+
+  .invest.html .fund-section {
+    margin-top: 8px !important;
+  }
 }
 
 .hero-badge .announcement-content {
